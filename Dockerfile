@@ -23,4 +23,4 @@ ADD models/ ./models
 
 # GRPC port
 EXPOSE 7000
-CMD tensorflow_model_server --port=7000 --model_name=YOUR_MODEL_HERE --model_base_path=/tensorflow/models/YOUR_MODEL_HERE
+CMD tensorflow_model_server --port=7000 --model_config_file=/tensorflow/models/config.tf
