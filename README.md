@@ -20,7 +20,7 @@ models/variables/     # variables folder
 models/saved_model.pb # graph file
 ```
 
-#### Folder structure
+### Folder structure
 
 The folder strucure needs to follow this pattern:
 
@@ -60,6 +60,8 @@ model_config_list: {
 
 Open to contributors
 
+- Move the port to an environment variable
+- Add information on how to run the docker image locally
 - Add tests (Run a container with the inception or mnist server)
 - Push a docker image on dockerhub
 - Relase a 1.0 version
