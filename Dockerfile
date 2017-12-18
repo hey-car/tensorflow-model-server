@@ -18,9 +18,8 @@ RUN echo "deb [arch=amd64] http://storage.googleapis.com/tensorflow-serving-apt 
     apt-get update && \
     apt-get install tensorflow-model-server
 
-# Copy the models to the image
-WORKDIR /tensorflow
-ADD models/ ./models
+# Mount the models
+VOLUME /tensorflow/models
 
 # GRPC port
 EXPOSE 7000

@@ -56,6 +56,20 @@ model_config_list: {
 }
 ```
 
+### Showtime
+
+In order to run locally, you can:
+
+```
+docker run --rm -it -p 127.0.0.1:7000:7000 -v $MODELS_FOLDER:/tensorflow/models marceloboeira/tensorflow-model-server:$VERSION
+```
+
+where:
+
+* `$MODELS_FOLDER` is the path where you want to get the models from
+* `$VERSION` is the desired release of this image
+
+
 ## TODO
 
 Open to contributors
