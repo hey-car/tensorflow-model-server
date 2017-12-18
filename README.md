@@ -1,4 +1,5 @@
-# TensorFlow Model Server
+# TensorFlow Model Server [![Docker Pulls](https://img.shields.io/docker/pulls/marceloboeira/tensorflow-model-server.svg)](https://hub.docker.com/r/marceloboeira/tensorflow-model-server/) [![Github Tag](https://img.shields.io/github/tag/marceloboeira/tensorflow-model-server.svg)](https://github.com/marceloboeira/tensorflow-model-server) [![Github Tag](https://img.shields.io/github/license/marceloboeira/tensorflow-model-server.svg)](https://github.com/marceloboeira/tensorflow-model-server)
+
 > Docker image with a tensor model server running
 
 ## Motivation
