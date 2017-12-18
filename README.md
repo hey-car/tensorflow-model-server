@@ -76,7 +76,5 @@ where:
 Open to contributors
 
 - Move the port to an environment variable
-- Add information on how to run the docker image locally
 - Add tests (Run a container with the inception or mnist server)
-- Push a docker image on dockerhub
 - Relase a 1.0 version
