@@ -1,4 +1,4 @@
-# TensorFlow Model Server [![Docker Pulls](https://img.shields.io/docker/pulls/marceloboeira/tensorflow-model-server.svg)](https://hub.docker.com/r/marceloboeira/tensorflow-model-server/) [![Github Tag](https://img.shields.io/github/tag/marceloboeira/tensorflow-model-server.svg)](https://github.com/marceloboeira/tensorflow-model-server) [![Github Tag](https://img.shields.io/github/license/marceloboeira/tensorflow-model-server.svg)](https://github.com/marceloboeira/tensorflow-model-server)
+# TensorFlow Model Server [![Docker Pulls](https://img.shields.io/docker/pulls/heycar/tensorflow-model-server.svg)](https://hub.docker.com/r/heycar/tensorflow-model-server/) [![Github Tag](https://img.shields.io/github/tag/hey-car/tensorflow-model-server.svg)](https://github.com/hey-car/tensorflow-model-server) [![Github Tag](https://img.shields.io/github/license/hey-car/tensorflow-model-server.svg)](https://github.com/hey-car/tensorflow-model-server)
 
 > Docker image with a tensor model server running
 
@@ -62,7 +62,7 @@ model_config_list: {
 In order to run locally, you can:
 
 ```
-docker run --rm -it -p 127.0.0.1:7000:7000 -v $MODELS_FOLDER:/tensorflow/models marceloboeira/tensorflow-model-server:$VERSION
+docker run --rm -it -p 127.0.0.1:7000:7000 -v $MODELS_FOLDER:/tensorflow/models heycar/tensorflow-model-server:$VERSION
 ```
 
 where:
