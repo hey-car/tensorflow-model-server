@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER Marcelo Boeira "engineering@hey.car"
+MAINTAINER Marcelo Boeira <team-engineering@hey.car>
 
 # Install essential dependencies
 RUN apt-get update && apt-get install -y \
