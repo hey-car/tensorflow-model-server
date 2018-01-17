@@ -62,14 +62,19 @@ model_config_list: {
 In order to run locally, you can:
 
 ```
-docker run --rm -it -p 127.0.0.1:7000:7000 -v $MODELS_FOLDER:/tensorflow/models heycar/tensorflow-model-server:$VERSION
+make run
 ```
 
-where:
+Check the `Makefile` for more info:
 
-* `$MODELS_FOLDER` is the path where you want to get the models from
-* `$VERSION` is the desired release of this image
+* `$MODELS_PATH` is the folder where you want to get the models from
+* `$TAG` is the desired release of this image
 
+## Contributing
+
+Remember to update the tag in the `Makefile`, use the same tag for git.
+
+Then, run: `make release`, which will `build` and `push` the new docker image to dockerhub.
 
 ## TODO
 
