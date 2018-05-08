@@ -1,8 +1,9 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER Marcelo Boeira <team-engineering@hey.car>
 
 # Install essential dependencies
+
 RUN apt-get update && apt-get install -y \
       build-essential \
       curl \
@@ -16,7 +17,8 @@ RUN echo "deb [arch=amd64] http://storage.googleapis.com/tensorflow-serving-apt 
     tee /etc/apt/sources.list.d/tensorflow-serving.list && \
     curl https://storage.googleapis.com/tensorflow-serving-apt/tensorflow-serving.release.pub.gpg | apt-key add - && \
     apt-get update && \
-    apt-get install tensorflow-model-server
+    apt-get install tensorflow-model-server=1.7.0
+
 
 # Mount the models
 VOLUME /tensorflow/models
