@@ -1,6 +1,6 @@
 MODELS_PATH := `pwd`/models
 DOCKER_BIN := `which docker`
-TAG := "heycar/tensorflow-model-server:0.5.0"
+TAG := "heycar/tensorflow-model-server:0.6.0"
 
 .PHONY: build
 build:
