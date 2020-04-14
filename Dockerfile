@@ -1,28 +1,16 @@
-FROM ubuntu:18.04
+FROM tensorflow/serving:2.1.0
 
-MAINTAINER Marcelo Boeira <team-engineering@hey.car>
-
-# Install essential dependencies
-
-RUN apt-get update && apt-get install -y \
-      build-essential \
-      curl \
-      libcurl3-dev \
-      libssl-dev && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-# Install the TensorFlow Model Server
-RUN echo "deb [arch=amd64] http://storage.googleapis.com/tensorflow-serving-apt stable tensorflow-model-server tensorflow-model-server-universal" | \
-    tee /etc/apt/sources.list.d/tensorflow-serving.list && \
-    curl https://storage.googleapis.com/tensorflow-serving-apt/tensorflow-serving.release.pub.gpg | apt-key add - && \
-    apt-get update && \
-    apt-get install tensorflow-model-server=1.12.0
-
+MAINTAINER Robin Henniges <team-engineering@hey.car>
 
 # Mount the models
-VOLUME /tensorflow/models
+RUN mkdir /tensorflow/
+RUN mkdir /tensorflow/models
+ADD models/ /tensorflow/models
 
 # GRPC port
-EXPOSE 7000
-CMD tensorflow_model_server --port=7000 --model_config_file=/tensorflow/models/config.tf
+EXPOSE 8500
+EXPOSE 8501
+
+#CMD tensorflow_model_server --port=8500 --rest_api_port=8501 --model_config_file=/tensorflow/models/config.tf --model_name=banner --model_base_path=/tensorflow/models/banner
+
+entrypoint tensorflow_model_server --port=8500 --rest_api_port=8501 --model_config_file=/tensorflow/models/config.tf

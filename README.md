@@ -20,6 +20,10 @@ That will create a folder strucure similar to:
 models/variables/     # variables folder
 models/saved_model.pb # graph file
 ```
+### Find out input name
+
+By call `saved_model_cli show --dir ./models/new_banner/1/ --all` its possible to find out the input name in the signauture definition.
+
 
 ### Folder structure
 

@@ -1,20 +1,14 @@
 model_config_list: {
   config: {
-    name: "foo",
-    base_path: "/tensorflow/models/foo",
+    name: "banner",
+    base_path: "/tensorflow/models/banner",
     model_platform: "tensorflow"
     model_version_policy: {latest{}},
   },
   config: {
-    name: "bar",
-    base_path: "/tensorflow/models/bar",
+    name: "new_banner",
+    base_path: "/tensorflow/models/new_banner",
     model_platform: "tensorflow"
-    model_version_policy: {all{}}
+    model_version_policy: {latest{}},
   },
-  config: {
-    name: "baz",
-    base_path: "/tensorflow/models/baz",
-    model_platform: "tensorflow"
-    model_version_policy: {specific{versions:0,versions:1}}
-  }
 }
